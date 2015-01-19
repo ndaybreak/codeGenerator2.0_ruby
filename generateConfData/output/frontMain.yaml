@@ -1,0 +1,179 @@
+--- !ruby/object:XGrid
+two_columns: false
+show_scroll: false
+entity_name: OptPromo
+entity_title: Promo pricing
+doller_fields: []
+percent_fields: []
+input_date_fields:
+- lastModTs
+action: optPromo
+colms_info:
+- - ''
+  - ''
+  - ''
+  - true
+  - ''
+- - Route to Market
+  - routeToMarket
+  - routeToMarket
+  - true
+  - pg-col-width
+- - Region
+  - rgnCdForDisplay
+  - region
+  - true
+  - pg-col-width
+- - Sub Region 1
+  - subregn1CdForDisplay
+  - subregn1Cd
+  - false
+  - pg-col-width
+- - Sub Region 2
+  - subregn2CdForDisplay
+  - subregn2Cd
+  - false
+  - pg-col-width
+- - Sub Region 3
+  - subregn3CdForDisplay
+  - subregn3Cd
+  - false
+  - pg-col-width
+- - Country
+  - cntryCdForDisplay
+  - cntryCd
+  - true
+  - pg-col-width
+- - Business Group
+  - businessGroup
+  - busGrpId
+  - true
+  - pg-col-width
+- - Business Model
+  - businessModel
+  - busModelCd
+  - true
+  - pg-col-width
+- - Note
+  - note
+  - note
+  - true
+  - pg-col-width
+- - Updated By
+  - lastModByEmail
+  - lastModById
+  - true
+  - pg-col-width
+- - Updated On
+  - lastModTs
+  - lastModTs
+  - true
+  - pg-col-width
+bigint_colms:
+- lastModById
+--- !ruby/object:XGrid
+two_columns: false
+show_scroll: false
+entity_name: OptSqCustExcp
+entity_title: PQB Customer Level Exclusion
+doller_fields: []
+percent_fields: []
+input_date_fields:
+- lastModTs
+action: optSqCustExcp
+colms_info:
+- - ''
+  - ''
+  - ''
+  - true
+  - ''
+- - Customer
+  - custId
+  - custId
+  - true
+  - pg-col-pqbcust-width
+- - Customer Type
+  - idType
+  - idType
+  - true
+  - pg-col-pqbcust-width
+- - Note
+  - note
+  - note
+  - true
+  - pg-col-pqbcust-width
+- - Updated By
+  - lastModByEmail
+  - lastModById
+  - true
+  - pg-col-pqbcust-width
+- - Updated On
+  - lastModTs
+  - lastModTs
+  - true
+  - pg-col-pqbcust-width
+bigint_colms:
+- lastModById
+--- !ruby/object:XGrid
+two_columns: false
+show_scroll: false
+entity_name: OptSqCtryBuExcp
+entity_title: PQB Country/BU Exclusion
+doller_fields: []
+percent_fields: []
+input_date_fields:
+- lastModTs
+action: optSqCtryBuExcp
+colms_info:
+- - ''
+  - ''
+  - ''
+  - true
+  - ''
+- - Region
+  - rgnCdForDisplay
+  - rgnCd
+  - true
+  - pg-col-width
+- - Sub Region 1
+  - subregn1CdForDisplay
+  - subregn1Cd
+  - false
+  - pg-col-width
+- - Sub Region 2
+  - subregn2CdForDisplay
+  - subregn2Cd
+  - false
+  - pg-col-width
+- - Sub Region 3
+  - subregn3CdForDisplay
+  - subregn3Cd
+  - false
+  - pg-col-width
+- - Country
+  - cntryCdForDisplay
+  - cntryCd
+  - true
+  - pg-col-width
+- - Business Unit
+  - busUnitForDisplay
+  - busUnit
+  - true
+  - pg-col-width
+- - Note
+  - note
+  - note
+  - true
+  - pg-col-width
+- - Updated By
+  - lastModByEmail
+  - lastModById
+  - true
+  - pg-col-width
+- - Updated On
+  - lastModTs
+  - lastModTs
+  - true
+  - pg-col-width
+bigint_colms:
+- lastModById

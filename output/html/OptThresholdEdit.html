@@ -1,0 +1,129 @@
+<div>
+
+	<div class="modal-header modal-header-extd">
+		<h3>Price Method Threshold</h3> 
+	</div>
+
+	<div class="modal-body">
+		<form class="form-horizontal" role="form">
+			<table>
+				<tr>
+					<td>
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label twoCols-label pa-edit-mandatory-label"> Country</label>
+					</td>
+					<td>
+						<div>
+							<select class="form-control" id="elCountry" ng-model="formItem.country" ng-options="c.valueForDisplay for c in countries" ng-change="clearError()" pa-combobox></select>
+						</div>
+					</td>
+					<td>
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label twoCols-label pa-edit-mandatory-label"> T1 ($)</label>
+					</td>
+					<td>
+						<div>
+						
+							<input class="form-control add_form_text_input" type="text" ng-model="item.t1" ng-change="elT1Check()" ng-blur="elT1Check('blur')" ng-focus="elT1Focus()" />
+						
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label twoCols-label pa-edit-mandatory-label"> Business Unit</label>
+					</td>
+					<td>
+						<div>
+							<select class="form-control" id="elBusinessUnit" ng-model="formItem.businessUnit" ng-options="c.valueForDisplay for c in businessUnits" ng-change="clearError()" pa-combobox></select>
+						</div>
+					</td>
+					<td>
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label twoCols-label pa-edit-mandatory-label"> T2 ($)</label>
+					</td>
+					<td>
+						<div>
+						
+							<input class="form-control add_form_text_input" type="text" ng-model="item.t2" ng-change="elT2Check()" ng-blur="elT2Check('blur')" ng-focus="elT2Focus()" />
+						
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label twoCols-label"> AMID2 *</label>
+					</td>
+					<td>
+						<div>
+						
+							<input class="form-control add_form_text_input" type="text" ng-model="item.amid2" ng-change="elAmid2Check()" ng-blur="elAmid2Check('blur')" ng-focus="elAmid2Focus()" />
+						
+						</div>
+					</td>
+					<td>
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label twoCols-label pa-edit-mandatory-label"> T3 ($)</label>
+					</td>
+					<td>
+						<div>
+						
+							<input class="form-control add_form_text_input" type="text" ng-model="item.t3" ng-change="elT3Check()" ng-blur="elT3Check('blur')" ng-focus="elT3Focus()" />
+						
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label twoCols-label pa-edit-mandatory-label"> Unverified Customer Pricing Method</label>
+					</td>
+					<td>
+						<div>
+							<select class="form-control" id="elUnverCustPrcMthd" ng-model="formItem.unverCustPrcMthd" ng-options="c.valueForDisplay for c in unverCustPrcMthds" ng-change="clearError()" pa-combobox></select>
+						</div>
+					</td>
+					<td>
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label twoCols-label"> Hold Initial Price ($)</label>
+					</td>
+					<td>
+						<div>
+						
+							<input class="form-control add_form_text_input" type="text" ng-model="item.holdIntlPrc" ng-change="elHoldIntlPrcCheck()" ng-blur="elHoldIntlPrcCheck('blur')" ng-focus="elHoldIntlPrcFocus()" />
+						
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label twoCols-label"> PPS Hold Initial Price ($)</label>
+					</td>
+					<td>
+						<div>
+						
+							<input class="form-control add_form_text_input" type="text" ng-model="item.ppsHoldIntlPrc" ng-change="elPpsHoldIntlPrcCheck()" ng-blur="elPpsHoldIntlPrcCheck('blur')" ng-focus="elPpsHoldIntlPrcFocus()" />
+						
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label twoCols-label"> Note</label>
+					</td>
+					<td colspan="3">
+						<div>
+						
+							<textarea class="ui-textarea" cols="20" rows="3" ng-model="item.note" ng-change="elNoteCheck()" ng-blur="elNoteCheck()" />
+						
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<div class="modal-custom-footer">
+		<a class="btn btn-Primary btn-add" ng-click="save()"><i class="icon-save"></i>Save</a>
+		<a class="btn btn-Secondary btn-cancel" ng-click="cancel()" style="border-top-right-radius: 5px; border-bottom-left-radius: 5px;"> <i class="icon-ban-circle"></i>Cancel</a>
+	</div>
+
+	<div class="alert error" ng-show="hasError">{{errorMessage}}</div>
+
+</div>

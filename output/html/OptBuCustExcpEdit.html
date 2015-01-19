@@ -1,0 +1,83 @@
+<div>
+
+	<div class="modal-header modal-header-extd">
+		<h3>BU-Customer Exception</h3> 
+	</div>
+
+	<div class="modal-body">
+		<form class="form-horizontal" role="form">
+			<table>
+				<tr class="form-group">
+					<td style="vertical-align: top;">
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label popup_table_lable pa-edit-mandatory-label"> Country</label>
+					</td>
+					<td style="vertical-align: top;">
+						<div class="col-lg-7">
+							<select class="form-control" id="elCountry" ng-model="formItem.country" ng-options="c.valueForDisplay for c in countries" ng-change="clearError()" pa-combobox></select>
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 15px;"></tr>
+				<tr class="form-group">
+					<td style="vertical-align: top;">
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label popup_table_lable pa-edit-mandatory-label"> Business Unit</label>
+					</td>
+					<td style="vertical-align: top;">
+						<div class="col-lg-7">
+							<select class="form-control" id="elBunit" ng-model="formItem.bunit" ng-options="c.valueForDisplay for c in businessUnits" ng-change="clearError()" pa-combobox></select>
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 15px;"></tr>
+				<tr class="form-group">
+					<td style="vertical-align: top;">
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label popup_table_lable pa-edit-mandatory-label"> MDCP Org ID</label>
+					</td>
+					<td style="vertical-align: top;">
+						<div class="col-lg-7">
+						
+							<input class="form-control add_form_text_input" type="text" ng-model="item.mdcpOrgId" ng-change="elMdcpOrgIdCheck()" ng-blur="elMdcpOrgIdCheck('blur')" ng-focus="elMdcpOrgIdFocus()" 
+							 pa-input="trimAndToUpperCase" />
+						
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 15px;"></tr>
+				<tr class="form-group">
+					<td style="vertical-align: top;">
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label popup_table_lable"> AMID2 *</label>
+					</td>
+					<td style="vertical-align: top;">
+						<div class="col-lg-7">
+						
+							<input class="form-control add_form_text_input" type="text" ng-model="item.amid2" ng-change="elAmid2Check()" ng-blur="elAmid2Check('blur')" ng-focus="elAmid2Focus()" 
+							/>
+						
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 15px;"></tr>
+				<tr class="form-group">
+					<td style="vertical-align: top;">
+						<label class="col-lg-3 control-label add_form_label pa-standalone-label popup_table_lable" for="elNote"> Note</label>
+					</td>
+					<td style="vertical-align: top;">
+						<div class="col-lg-7">
+							<label for="elNote" class="cb-label"><span></span></label>
+							<input class="cstmeinput" type="checkbox" id="elNote" name="note" ng-model="formItem.note" pa-checkbox />
+						</div>
+					</td>
+				</tr>
+				<tr style="height: 15px;"></tr>
+			</table>
+		</form>
+	</div>
+
+	<div class="modal-custom-footer">
+		<a class="btn btn-Primary btn-add" ng-click="save()"><i class="icon-save"></i>Save</a>
+		<a class="btn btn-Secondary btn-cancel" ng-click="cancel()" style="border-top-right-radius: 5px; border-bottom-left-radius: 5px;"> <i class="icon-ban-circle"></i>Cancel</a>
+	</div>
+
+	<div class="alert error" ng-show="hasError">{{errorMessage}}</div>
+
+</div>

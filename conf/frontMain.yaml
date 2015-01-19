@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------------------
+--- !ruby/object:XGrid
+entity_name: OptSqCustExcp
+entity_title: PQB Customer Level Exclusion 
+doller_fields: 
+percent_fields:
+input_date_fields:
+  - 'lastModTs'
+action: optSqCustExcp
+colms_info:
+  - ['','','',true,'']
+  - [Customer ID, customerId, customerId, true, pg-col-width]
+  - [ID type, idType, idType, true, pg-col-width]
+  - [Note, note, note, true, pg-col-width]
+  - [Updated By, lastModByEmail, lastModById, true, pg-col-width]
+  - [Updated On, lastModTs, lastModTs, true, pg-col-width]
+bigint_colms:
+  - 'lastModById'
+#two_columns: false
+#show_scroll: false

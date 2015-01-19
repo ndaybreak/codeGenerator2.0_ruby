@@ -1,0 +1,299 @@
+--- !ruby/object:XDetail
+entity_name: OptBuCustExcp
+screen_name: BU-Customer Exception
+one_column_flag: true
+items:
+- !ruby/object:XDetailItem
+  internal_id:        1
+  service_name:       getCountries
+  return_value:       countries
+  default_index:      0
+  data_source:        admin
+  control_type:       dropdown
+  key:                cd
+  item_name:          country
+  item_value:         cntryCd
+  item_desc:          Country
+  desc_for_message:   Country
+  html_element_id:    elCountry
+  html_element_name:  elCountry
+  checks:             
+  on_check_fail:
+  mandatory:          true
+  side:
+- !ruby/object:XDetailItem
+  internal_id:        2
+  service_name:       getBusinessUnits
+  return_value:       businessUnits
+  default_index:      0
+  data_source:        admin
+  control_type:       dropdown
+  key:                cd
+  item_name:          bunit
+  item_value:         busUnit
+  item_desc:          Business Unit
+  desc_for_message:   Business Unit
+  html_element_id:    elBunit
+  html_element_name:  elBunit
+  checks:             
+  on_check_fail:
+  mandatory:          true
+  side:
+- !ruby/object:XDetailItem
+  internal_id:        3
+  service_name:
+  return_value:
+  default_index:
+  data_source:
+  control_type:       text2
+  key:
+  item_name:          mdcpOrgId
+  item_value:
+  item_desc:          MDCP Org ID
+  desc_for_message:   MDCP Org ID
+  html_element_id:    elMdcpOrgId
+  html_element_name:  elMdcpOrgId
+  checks:             ['notNull','max32','digital']
+  on_check_fail:      MDCP Org ID is required.;Max length of MDCP Org ID is 32.;MDCP Org ID should be numeric.
+  mandatory:          true
+  side:
+- !ruby/object:XDetailItem
+  internal_id:        4
+  service_name:
+  return_value:
+  default_index:
+  data_source:
+  control_type:       text
+  key:
+  item_name:          amid2
+  item_value:
+  item_desc:          AMID2 *
+  desc_for_message:   AMID2
+  html_element_id:    elAmid2
+  html_element_name:  elAmid2
+  checks:             ['notNull','max15']
+  on_check_fail:      Please input a valid AMID2 or an asterisk.;Max length of AMID2 is 15.
+  mandatory:          false
+  side:
+- !ruby/object:XDetailItem
+  internal_id:        5
+  service_name:
+  return_value:
+  default_index:
+  data_source:
+  control_type:       checkbox
+  key:
+  item_name:          note
+  item_value:
+  item_desc:          Note
+  desc_for_message:   Note
+  html_element_id:    elNote
+  html_element_name:  elNote
+  checks:             ['max256orNull']
+  on_check_fail:      Max length of Note is 256.
+  mandatory:          false
+  side:
+  
+--- !ruby/object:XDetail
+entity_name: OptThreshold
+screen_name: Price Method Threshold
+one_column_flag: false
+items:
+- !ruby/object:XDetailItem
+  internal_id:        1
+  service_name:       getCountries
+  return_value:       countries
+  default_index:      0
+  data_source:        admin
+  control_type:       dropdown
+  key:                cd
+  item_name:          country
+  item_value:         cntryCd
+  item_desc:          Country
+  desc_for_message:   Country
+  html_element_id:    elCountry
+  html_element_name:  elCountry
+  checks:             
+  on_check_fail:
+  mandatory:          true
+  side:				  L
+- !ruby/object:XDetailItem
+  internal_id:        2
+  service_name:       
+  return_value:       
+  default_index:      
+  data_source:        
+  control_type:       text
+  key:                
+  item_name:          t1
+  item_value:         
+  item_desc:          T1 ($)
+  desc_for_message:   T1 ($)
+  html_element_id:    elT1
+  html_element_name:  elT1
+  checks:             ['notNull','curr','max18']
+  on_check_fail:      T1 ($) is required.;T1 ($) should be positive numeric, with maximum 2 decimal places, like 10.25;Max length of T1 ($) is 18.
+  mandatory:          true
+  side:               R
+- !ruby/object:XDetailItem
+  internal_id:        3
+  service_name:       getBusinessUnits
+  return_value:       businessUnits
+  default_index:      0
+  data_source:        admin
+  control_type:       dropdown
+  key:                cd
+  item_name:          businessUnit
+  item_value:         busUnit
+  item_desc:          Business Unit
+  desc_for_message:   Business Unit
+  html_element_id:    elBusinessUnit
+  html_element_name:  elBusinessUnit
+  checks:             
+  on_check_fail:
+  mandatory:          true
+  side:               L
+- !ruby/object:XDetailItem
+  internal_id:        4
+  service_name:
+  return_value:
+  default_index:
+  data_source:
+  control_type:       text
+  key:
+  item_name:          t2
+  item_value:
+  item_desc:          T2 ($)
+  desc_for_message:   T2 ($)
+  html_element_id:    elT2
+  html_element_name:  elT2
+  checks:             ['notNull','curr','max18']
+  on_check_fail:      T2 ($) is required.;T2 ($) should be positive numeric, with maximum 2 decimal places, like 10.25;Max length of T2 ($) is 18.
+  mandatory:          true
+  side:				  R
+- !ruby/object:XDetailItem
+  internal_id:        5
+  service_name:
+  return_value:
+  default_index:
+  data_source:
+  control_type:       text
+  key:
+  item_name:          amid2
+  item_value:
+  item_desc:          AMID2 *
+  desc_for_message:   AMID2
+  html_element_id:    elAmid2
+  html_element_name:  elAmid2
+  checks:             ['notNull','max15']
+  on_check_fail:      Please input a valid AMID2 or an asterisk.;Max length of AMID2 is 15.
+  mandatory:          false
+  side:				  L
+- !ruby/object:XDetailItem
+  internal_id:        6
+  service_name:
+  return_value:
+  default_index:
+  data_source:
+  control_type:       text
+  key:
+  item_name:          t3
+  item_value:
+  item_desc:          T3 ($)
+  desc_for_message:   T3 ($)
+  html_element_id:    elT3
+  html_element_name:  elT3
+  checks:             ['notNull','curr','max18']
+  on_check_fail:      T3 ($) is required.;T3 ($) should be positive numeric, with maximum 2 decimal places, like 10.25;Max length of T3 ($) is 18.
+  mandatory:          true
+  side:				  R
+- !ruby/object:XDetailItem
+  internal_id:        7
+  service_name:       getUnverCustPrcMthds
+  return_value:       unverCustPrcMthds
+  default_index:      0
+  data_source:        admin
+  control_type:       dropdown
+  key:                cd
+  item_name:          unverCustPrcMthd
+  item_value:         unverCustPrcMthd
+  item_desc:          Unverified Customer Pricing Method
+  desc_for_message:   Unverified Customer Pricing Method
+  html_element_id:    elUnverCustPrcMthd
+  html_element_name:  elUnverCustPrcMthd
+  checks:             
+  on_check_fail:
+  mandatory:          true
+  side:               L
+- !ruby/object:XDetailItem
+  internal_id:        8
+  service_name:
+  return_value:
+  default_index:
+  data_source:
+  control_type:       text
+  key:
+  item_name:          holdIntlPrc
+  item_value:
+  item_desc:          Hold Initial Price ($)
+  desc_for_message:   Hold Initial Price ($)
+  html_element_id:    elHoldIntlPrc
+  html_element_name:  elHoldIntlPrc
+  checks:             ['nullOrMax18_2Curr']
+  on_check_fail:      Hold Initial Price ($) should be empty or positive numeric with maximum 18 integer and 2 decimal places, like 10.25.
+  mandatory:          false
+  side:				  R  
+- !ruby/object:XDetailItem
+  internal_id:        9
+  service_name:       
+  return_value:       
+  default_index:      
+  data_source:        
+  control_type:       placeholder
+  key:                
+  item_name:          
+  item_value:         
+  item_desc:          
+  desc_for_message:   
+  html_element_id:    
+  html_element_name:  
+  checks:             
+  on_check_fail:
+  mandatory:          
+  side:               L
+- !ruby/object:XDetailItem
+  internal_id:        10
+  service_name:
+  return_value:
+  default_index:
+  data_source:
+  control_type:       text
+  key:
+  item_name:          ppsHoldIntlPrc
+  item_value:
+  item_desc:          PPS Hold Initial Price ($)
+  desc_for_message:   PPS Hold Initial Price ($)
+  html_element_id:    elPpsHoldIntlPrc
+  html_element_name:  elPpsHoldIntlPrc
+  checks:             ['nullOrMax18_2Curr']
+  on_check_fail:      PPS Hold Initial Price ($) should be empty or positive numeric with maximum 18 integer and 2 decimal places, like 10.25.
+  mandatory:          false
+  side:				  R  
+- !ruby/object:XDetailItem
+  internal_id:        11
+  service_name:
+  return_value:
+  default_index:
+  data_source:
+  control_type:       textarea
+  key:
+  item_name:          note
+  item_value:
+  item_desc:          Note
+  desc_for_message:   Note
+  html_element_id:    elNote
+  html_element_name:  elNote
+  checks:             ['max256orNull']
+  on_check_fail:      Max length of Note is 256.
+  mandatory:          false
+  side:
